@@ -1,0 +1,21 @@
+{
+  "name": "ai-business-copilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI Business Copilot — Asistente administrativo para microempresas vía WhatsApp",
+  "scripts": {
+    "dev:worker": "pnpm --filter @aibizcopilot/worker dev",
+    "dev:dashboard": "pnpm --filter @aibizcopilot/dashboard dev",
+    "deploy:worker": "pnpm --filter @aibizcopilot/worker deploy",
+    "build:dashboard": "pnpm --filter @aibizcopilot/dashboard build",
+    "db:generate": "pnpm --filter @aibizcopilot/worker db:generate",
+    "db:migrate": "pnpm --filter @aibizcopilot/worker db:migrate",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.15.4"
+}

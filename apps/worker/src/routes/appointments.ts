@@ -1,0 +1,2 @@
+// Routes — appointments CRUD
+export {};

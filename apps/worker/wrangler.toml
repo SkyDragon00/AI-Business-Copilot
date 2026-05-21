@@ -1,0 +1,27 @@
+#:schema node_modules/wrangler/config-schema.json
+
+name = "ai-business-copilot"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ─── KV Namespaces ────────────────────────────────────────────────
+# Estado conversacional de WhatsApp (TTL manejado en código)
+[[kv_namespaces]]
+binding = "CONVERSATIONS_KV"
+id = "PLACEHOLDER_KV_ID"                # Reemplazar con ID real tras `wrangler kv namespace create`
+preview_id = "PLACEHOLDER_KV_PREVIEW_ID"
+
+# ─── Variables de entorno (los secretos van en .dev.vars) ─────────
+[vars]
+ENVIRONMENT = "development"
+
+# ─── Cron Triggers ────────────────────────────────────────────────
+# Recordatorios de citas: cada hora
+# Cierre de caja: 22:00 diario (hora Ecuador UTC-5 → 03:00 UTC)
+[triggers]
+crons = ["0 * * * *", "0 3 * * *"]
+
+# ─── Configuración de observabilidad ─────────────────────────────
+[observability]
+enabled = true
