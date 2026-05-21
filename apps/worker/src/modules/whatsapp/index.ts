@@ -1,2 +1,1 @@
-// Meta WhatsApp Cloud API client
-export {};
+export { verifyMetaSignature } from "./signature";

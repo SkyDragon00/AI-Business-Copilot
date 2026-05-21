@@ -1,10 +1,15 @@
 # Dependencies
 node_modules/
+**/node_modules/
 
 # Package manager / cache
 .pnpm-store/
 .npm/
 .yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/install-state.gz
+.pnp.*
 
 # Build outputs
 dist/
@@ -19,6 +24,7 @@ coverage/
 .env.local
 .env.*.local
 .dev.vars
+.dev.vars.example
 *.secret
 *.secrets
 
