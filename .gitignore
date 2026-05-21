@@ -1,20 +1,35 @@
 # Dependencies
 node_modules/
 
+# Package manager / cache
+.pnpm-store/
+.npm/
+.yarn/
+
 # Build outputs
 dist/
 .next/
 .turbo/
 out/
+coverage/
+*.tsbuildinfo
 
 # Environment variables
 .env
 .env.local
 .env.*.local
 .dev.vars
+*.secret
+*.secrets
 
 # Cloudflare
 .wrangler/
+
+# Local database / generated data
+*.sqlite
+*.sqlite3
+*.db
+drizzle/meta/
 
 # IDE
 .vscode/settings.json
@@ -26,10 +41,9 @@ out/
 .DS_Store
 Thumbs.db
 
-# Drizzle
-drizzle/meta/
-
 # Logs
 *.log
 npm-debug.log*
 pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
